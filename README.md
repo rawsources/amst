@@ -13,16 +13,11 @@ All data lives in the Google Sheet; all secrets live in the script's **Script Pr
 
 ## Files
 
-| File | Purpose |
-|---|---|
-| `sync.gs` | Scheduled sync from AIO into the `Tickets` sheet |
-| `app.gs` | Web app server: tickets, triage, remarks, reports, import |
-| `auth.gs` | PIN sign-in and sessions |
-| `presence.gs` | Who's online |
-| `notify.gs` | Email builders (Outlook compose; optional automatic Gmail sending) |
-| `api.gs` | JSON endpoint so the page can be hosted on GitHub Pages |
-| `index.html` | The web app page |
-| `appsscript.json` | Apps Script manifest |
+| File | Where | Purpose |
+|---|---|---|
+| `Code.gs` | Apps Script | All server code: sync from AIO, triage, remarks, reports, PIN sign-in, who's online, email builders, API for GitHub Pages |
+| `index.html` | Apps Script **and** GitHub Pages | The web app page (same file in both places) |
+| `config.js` | GitHub Pages only | `window.AMS_API_URL` = the web app's `/exec` link |
 
 ## Script Properties (set in Apps Script → Project Settings — never in code)
 
